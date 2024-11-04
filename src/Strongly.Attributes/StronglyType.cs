@@ -30,5 +30,6 @@ namespace Strongly
         UnsignedShort,
         UnsignedInt,
         UnsignedLong,
+        NativeUnsignedInt,
     }
 }
