@@ -27,5 +27,6 @@ namespace Strongly
         Byte,
         NativeInt,
         SignedByte,
+        UnsignedShort,
     }
 }
