@@ -111,6 +111,7 @@ static class EmbeddedSources
     )
     {
         IsNumeric = true,
+        IsSigned = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -155,6 +156,7 @@ static class EmbeddedSources
     )
     {
         IsNumeric = true,
+        IsSigned = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -199,6 +201,7 @@ static class EmbeddedSources
     )
     {
         IsNumeric = true,
+        IsSigned = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -265,6 +268,7 @@ static class EmbeddedSources
     )
     {
         IsNumeric = true,
+        IsSigned = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -287,6 +291,7 @@ static class EmbeddedSources
     )
     {
         IsNumeric = true,
+        IsSigned = true,
         TemplateVars =
         {
             [ToStringKey] = "Value.ToString(System.Globalization.NumberFormatInfo.InvariantInfo)",
@@ -310,6 +315,7 @@ static class EmbeddedSources
     )
     {
         IsNumeric = true,
+        IsSigned = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -354,6 +360,7 @@ static class EmbeddedSources
     )
     {
         IsNumeric = true,
+        IsSigned = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Number),
@@ -376,6 +383,7 @@ static class EmbeddedSources
     )
     {
         IsNumeric = true,
+        IsSigned = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Number),
@@ -398,6 +406,7 @@ static class EmbeddedSources
     )
     {
         IsNumeric = true,
+        IsSigned = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Number),
@@ -504,6 +513,7 @@ static class EmbeddedSources
     )
     {
         public bool IsNumeric { get; init; } = false;
+        public bool IsSigned { get; init; } = false;
         public bool NullableEnable { get; init; } = false;
 
         public Dictionary<string, Lazy<string>> Customizations { get; init; } = new();

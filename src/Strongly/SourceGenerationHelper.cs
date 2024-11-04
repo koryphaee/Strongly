@@ -196,7 +196,7 @@ static class SourceGenerationHelper
                 sb.AppendLine(EmbeddedSources.MathDivision.Value);
             if (math.IsSet(StronglyMath.Multiplication))
                 sb.AppendLine(EmbeddedSources.MathMultiplication.Value);
-            if (math.IsSet(StronglyMath.Negation))
+            if (math.IsSet(StronglyMath.Negation) && resources.IsSigned)
                 sb.AppendLine(EmbeddedSources.MathNegation.Value);
             if (math.IsSet(StronglyMath.Compare))
                 sb.AppendLine(EmbeddedSources.OperatorsCompare.Value);
