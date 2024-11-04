@@ -1,1 +1,1 @@
-﻿    public static TYPENAME operator -(TYPENAME value) => new TYPENAME(-value.Value);
+﻿    public static TYPENAME operator -(TYPENAME value) => new TYPENAME((BASE_TYPENAME) (-value.Value));
