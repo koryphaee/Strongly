@@ -26,5 +26,6 @@ namespace Strongly
         Short,
         Byte,
         NativeInt,
+        SignedByte,
     }
 }

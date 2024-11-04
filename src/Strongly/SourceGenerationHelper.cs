@@ -41,6 +41,7 @@ static class SourceGenerationHelper
             StronglyType.Long => EmbeddedSources.LongResources,
             StronglyType.Short => EmbeddedSources.ShortResources,
             StronglyType.Byte => EmbeddedSources.ByteResources,
+            StronglyType.SignedByte => EmbeddedSources.SignedByteResources,
             StronglyType.NativeInt => EmbeddedSources.NativeIntResources,
             StronglyType.Decimal => EmbeddedSources.DecimalResources,
             StronglyType.Double => EmbeddedSources.DoubleResources,
