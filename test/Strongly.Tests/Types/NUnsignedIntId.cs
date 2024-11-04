@@ -69,3 +69,8 @@ public partial struct EquatableNativeUnsignedIntId
 public partial struct ComparableNativeUnsignedIntId
 {
 }
+
+[Strongly(backingType: StronglyType.NativeUnsignedInt, math: StronglyMath.All)]
+public partial struct NativeUnsignedIntMath
+{
+}

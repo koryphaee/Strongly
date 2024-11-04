@@ -48,7 +48,7 @@ static class EmbeddedSources
     internal static readonly Lazy<string> MathAddition = LoadEmbeddedResource("Base.Math_Addition");
     internal static readonly Lazy<string> MathDivision = LoadEmbeddedResource("Base.Math_Division");
     internal static readonly Lazy<string> MathNegation = LoadEmbeddedResource("Base.Math_Negation");
-
+    internal static readonly Lazy<string> MathXor = LoadEmbeddedResource("Base.Math_Xor");          
 
     internal static readonly Lazy<string> OperatorsCompare =
         LoadEmbeddedResource("Base.Operators_Compare");
@@ -361,6 +361,7 @@ static class EmbeddedSources
     {
         IsNumeric = true,
         IsSigned = true,
+        IsFloatingPoint = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Number),
@@ -384,6 +385,7 @@ static class EmbeddedSources
     {
         IsNumeric = true,
         IsSigned = true,
+        IsFloatingPoint = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Number),
@@ -407,6 +409,7 @@ static class EmbeddedSources
     {
         IsNumeric = true,
         IsSigned = true,
+        IsFloatingPoint = true,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Number),
@@ -514,6 +517,7 @@ static class EmbeddedSources
     {
         public bool IsNumeric { get; init; } = false;
         public bool IsSigned { get; init; } = false;
+        public bool IsFloatingPoint { get; init; } = false;
         public bool NullableEnable { get; init; } = false;
 
         public Dictionary<string, Lazy<string>> Customizations { get; init; } = new();

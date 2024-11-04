@@ -422,4 +422,13 @@ public class ByteIdTests
     {
         public NewtonsoftJsonByteId? Id { get; set; }
     }
+    
+    [Fact]
+    public void XorOperator()
+    {
+        ByteMath a = new(3);
+        ByteMath b = new(10);
+        ByteMath c = a ^ b;
+        Assert.Equal(9, c.Value);
+    }
 }

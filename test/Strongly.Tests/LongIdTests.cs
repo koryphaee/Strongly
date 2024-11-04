@@ -421,4 +421,13 @@ public class LongIdTests
     {
         public NewtonsoftJsonLongId? Id { get; set; }
     }
+    
+    [Fact]
+    public void XorOperator()
+    {
+        LongMath a = new(3);
+        LongMath b = new(10);
+        LongMath c = a ^ b;
+        Assert.Equal(9, c.Value);
+    }
 }

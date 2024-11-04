@@ -422,4 +422,13 @@ public class ShortIdTests
     {
         public NewtonsoftJsonShortId? Id { get; set; }
     }
+    
+    [Fact]
+    public void XorOperator()
+    {
+        ShortMath a = new(3);
+        ShortMath b = new(10);
+        ShortMath c = a ^ b;
+        Assert.Equal(9, c.Value);
+    }
 }

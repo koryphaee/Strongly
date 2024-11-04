@@ -422,4 +422,13 @@ public class UnsignedShortIdTests
     {
         public NewtonsoftJsonUnsignedShortId? Id { get; set; }
     }
+    
+    [Fact]
+    public void XorOperator()
+    {
+        UnsignedShortMath a = new(3);
+        UnsignedShortMath b = new(10);
+        UnsignedShortMath c = a ^ b;
+        Assert.Equal(9u, c.Value);
+    }
 }

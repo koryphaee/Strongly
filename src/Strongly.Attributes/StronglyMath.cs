@@ -30,8 +30,10 @@ namespace Strongly
         Negation = 32,
 
         Compare = 64,
+        
+        Xor = 128,
 
         Basic = Addition | Subtraction | Negation | Compare,
-        All = Basic | Division | Multiplication,
+        All = Basic | Division | Multiplication | Xor,
     }
 }

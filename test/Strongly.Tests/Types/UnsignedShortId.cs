@@ -68,3 +68,8 @@ public partial struct EquatableUnsignedShortId
 public partial struct ComparableUnsignedShortId
 {
 }
+
+[Strongly(backingType: StronglyType.UnsignedShort, math: StronglyMath.All)]
+public partial struct UnsignedShortMath
+{
+}

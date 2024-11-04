@@ -422,4 +422,13 @@ public class SignedByteIdTests
     {
         public NewtonsoftJsonSignedByteId? Id { get; set; }
     }
+    
+    [Fact]
+    public void XorOperator()
+    {
+        SignedByteMath a = new(3);
+        SignedByteMath b = new(10);
+        SignedByteMath c = a ^ b;
+        Assert.Equal(9, c.Value);
+    }
 }

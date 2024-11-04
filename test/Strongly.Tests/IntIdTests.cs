@@ -421,4 +421,13 @@ public class IntIdTests
     {
         public NewtonsoftJsonIntId? Id { get; set; }
     }
+    
+    [Fact]
+    public void XorOperator()
+    {
+        IntMath a = new(3);
+        IntMath b = new(10);
+        IntMath c = a ^ b;
+        Assert.Equal(9, c.Value);
+    }
 }

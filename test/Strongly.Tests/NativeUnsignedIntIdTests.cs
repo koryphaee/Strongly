@@ -409,4 +409,13 @@ public class NativeUnsignedIntIdTests
     {
         public NewtonsoftJsonNativeUnsignedIntId? Id { get; set; }
     }
+    
+    [Fact]
+    public void XorOperator()
+    {
+        NativeUnsignedIntMath a = new(3);
+        NativeUnsignedIntMath b = new(10);
+        NativeUnsignedIntMath c = a ^ b;
+        Assert.Equal(9u, c.Value);
+    }
 }

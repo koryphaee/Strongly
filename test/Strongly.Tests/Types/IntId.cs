@@ -68,3 +68,8 @@ public partial struct EquatableIntId
 public partial struct ComparableIntId
 {
 }
+
+[Strongly(backingType: StronglyType.Int, math: StronglyMath.All)]
+public partial struct IntMath
+{
+}

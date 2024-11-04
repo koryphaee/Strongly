@@ -68,3 +68,8 @@ public partial struct EquatableLongId
 public partial struct ComparableLongId
 {
 }
+
+[Strongly(backingType: StronglyType.Long, math: StronglyMath.All)]
+public partial struct LongMath
+{
+}

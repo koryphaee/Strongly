@@ -515,4 +515,13 @@ public class BigIntegerIdTests
         Assert.Equal(a >= b, new BigIntMath(a) >= new BigIntMath(b));
         Assert.Equal(a <= b, new BigIntMath(a) <= new BigIntMath(b));
     }
+
+    [Fact]
+    public void XorOperator()
+    {
+        BigIntMath a = new(3);
+        BigIntMath b = new(10);
+        BigIntMath c = a ^ b;
+        Assert.Equal(9, c.Value);
+    }
 }

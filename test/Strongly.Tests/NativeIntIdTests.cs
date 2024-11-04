@@ -410,4 +410,13 @@ public class NativeIntIdTests
     {
         public NewtonsoftJsonNativeIntId? Id { get; set; }
     }
+    
+    [Fact]
+    public void XorOperator()
+    {
+        NativeIntMath a = new(3);
+        NativeIntMath b = new(10);
+        NativeIntMath c = a ^ b;
+        Assert.Equal(9, c.Value);
+    }
 }

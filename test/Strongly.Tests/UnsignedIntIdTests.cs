@@ -423,4 +423,13 @@ public class UnsignedIntIdTests
     {
         public NewtonsoftJsonUnsignedIntId? Id { get; set; }
     }
+    
+    [Fact]
+    public void XorOperator()
+    {
+        UnsignedIntMath a = new(3);
+        UnsignedIntMath b = new(10);
+        UnsignedIntMath c = a ^ b;
+        Assert.Equal(9u, c.Value);
+    }
 }

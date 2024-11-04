@@ -200,6 +200,8 @@ static class SourceGenerationHelper
                 sb.AppendLine(EmbeddedSources.MathNegation.Value);
             if (math.IsSet(StronglyMath.Compare))
                 sb.AppendLine(EmbeddedSources.OperatorsCompare.Value);
+            if (math.IsSet(StronglyMath.Xor) && !resources.IsFloatingPoint)
+                sb.AppendLine(EmbeddedSources.MathXor.Value);
         }
         else if (resources.CompareOperators is not null && math.IsSet(StronglyMath.Compare))
             if (math.IsSet(StronglyMath.Compare))

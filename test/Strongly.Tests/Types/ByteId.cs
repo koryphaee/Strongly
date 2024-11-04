@@ -68,3 +68,8 @@ public partial struct EquatableByteId
 public partial struct ComparableByteId
 {
 }
+
+[Strongly(backingType: StronglyType.Byte, math: StronglyMath.All)]
+public partial struct ByteMath
+{
+}
