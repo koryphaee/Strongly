@@ -1,6 +1,7 @@
 using System.Runtime.CompilerServices;
 using Dapper;
 using Strongly.IntegrationTests.Types;
+using Strongly.UnsignedIntegrationTests.Types;
 
 namespace Strongly.IntegrationTests;
 
@@ -11,6 +12,7 @@ public static class DapperTypeHandlers
     {
         SqlMapper.AddTypeHandler(new DapperGuidId.DapperTypeHandler());
         SqlMapper.AddTypeHandler(new DapperIntId.DapperTypeHandler());
+        SqlMapper.AddTypeHandler(new DapperUnsignedIntId.DapperTypeHandler());
         SqlMapper.AddTypeHandler(new DapperStringId.DapperTypeHandler());
         SqlMapper.AddTypeHandler(new DapperLongId.DapperTypeHandler());
         SqlMapper.AddTypeHandler(new DapperNullableStringId.DapperTypeHandler());

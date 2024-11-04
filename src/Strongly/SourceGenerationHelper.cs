@@ -38,6 +38,7 @@ static class SourceGenerationHelper
                 },
             },
             StronglyType.Int => EmbeddedSources.IntResources,
+            StronglyType.UnsignedInt => EmbeddedSources.UnsignedIntResources,
             StronglyType.Long => EmbeddedSources.LongResources,
             StronglyType.Short => EmbeddedSources.ShortResources,
             StronglyType.UnsignedShort => EmbeddedSources.UnsignedShortResources,
