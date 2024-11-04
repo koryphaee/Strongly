@@ -15,6 +15,7 @@ public static class DapperTypeHandlers
         SqlMapper.AddTypeHandler(new DapperUnsignedIntId.DapperTypeHandler());
         SqlMapper.AddTypeHandler(new DapperStringId.DapperTypeHandler());
         SqlMapper.AddTypeHandler(new DapperLongId.DapperTypeHandler());
+        SqlMapper.AddTypeHandler(new DapperUnsignedLongId.DapperTypeHandler());
         SqlMapper.AddTypeHandler(new DapperNullableStringId.DapperTypeHandler());
         SqlMapper.AddTypeHandler(new DapperNewIdId.DapperTypeHandler());
         SqlMapper.AddTypeHandler(new DapperBigIntegerId.DapperTypeHandler());

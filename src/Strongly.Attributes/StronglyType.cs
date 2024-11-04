@@ -29,5 +29,6 @@ namespace Strongly
         SignedByte,
         UnsignedShort,
         UnsignedInt,
+        UnsignedLong,
     }
 }
