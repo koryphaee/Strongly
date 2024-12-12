@@ -110,8 +110,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
-        IsSigned = true,
+        NumericKind = NumericKind.Signed,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -133,7 +132,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
+        NumericKind = NumericKind.Unsigned,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -155,8 +154,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
-        IsSigned = true,
+        NumericKind = NumericKind.Signed,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -178,7 +176,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
+        NumericKind = NumericKind.Unsigned,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -200,8 +198,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
-        IsSigned = true,
+        NumericKind = NumericKind.Signed,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -223,7 +220,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
+        NumericKind = NumericKind.Unsigned,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -245,7 +242,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
+        NumericKind = NumericKind.Unsigned,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -267,8 +264,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
-        IsSigned = true,
+        NumericKind = NumericKind.Signed,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -290,8 +286,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
-        IsSigned = true,
+        NumericKind = NumericKind.Signed,
         TemplateVars =
         {
             [ToStringKey] = "Value.ToString(System.Globalization.NumberFormatInfo.InvariantInfo)",
@@ -314,8 +309,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
-        IsSigned = true,
+        NumericKind = NumericKind.Signed,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -337,7 +331,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
+        NumericKind = NumericKind.Unsigned,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Integer),
@@ -359,8 +353,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
-        IsSigned = true,
+        NumericKind = NumericKind.Signed,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Number),
@@ -382,8 +375,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
-        IsSigned = true,
+        NumericKind = NumericKind.Signed,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Number),
@@ -405,8 +397,7 @@ static class EmbeddedSources
         DefaultIFormattable
     )
     {
-        IsNumeric = true,
-        IsSigned = true,
+        NumericKind = NumericKind.Signed,
         TemplateVars =
         {
             [NumberStyleKey] = nameof(NumberStyles.Number),
@@ -512,8 +503,8 @@ static class EmbeddedSources
         Lazy<string>? CompareOperators = null
     )
     {
-        public bool IsNumeric { get; init; } = false;
-        public bool IsSigned { get; init; } = false;
+        public NumericKind NumericKind { get; init; } = NumericKind.None;
+        
         public bool NullableEnable { get; init; } = false;
 
         public Dictionary<string, Lazy<string>> Customizations { get; init; } = new();
@@ -521,7 +512,7 @@ static class EmbeddedSources
         // ReSharper disable once CollectionNeverUpdated.Global
         public Dictionary<string, string> TemplateVars { get; init; } = new();
     }
-
+    
     internal static string LoadTemplateForEmitting(string resourceName)
     {
         var resource = LoadEmbeddedResource($"Sources.{resourceName}");

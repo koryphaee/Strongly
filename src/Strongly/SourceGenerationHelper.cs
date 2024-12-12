@@ -184,7 +184,7 @@ static class SourceGenerationHelper
             sb.AppendLine(EmbeddedSources.ImplicitTo.Value);
 
         var math = ctx.Config.Math;
-        if (resources.IsNumeric &&
+        if (resources.NumericKind is not NumericKind.None &&
             ctx.Config.Math is not (StronglyMath.None or StronglyMath.Default))
         {
             sb.AppendLine(EmbeddedSources.MathConst.Value);
@@ -196,7 +196,7 @@ static class SourceGenerationHelper
                 sb.AppendLine(EmbeddedSources.MathDivision.Value);
             if (math.IsSet(StronglyMath.Multiplication))
                 sb.AppendLine(EmbeddedSources.MathMultiplication.Value);
-            if (math.IsSet(StronglyMath.Negation) && resources.IsSigned)
+            if (math.IsSet(StronglyMath.Negation) && resources.NumericKind is NumericKind.Signed)
                 sb.AppendLine(EmbeddedSources.MathNegation.Value);
             if (math.IsSet(StronglyMath.Compare))
                 sb.AppendLine(EmbeddedSources.OperatorsCompare.Value);
